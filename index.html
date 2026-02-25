@@ -996,9 +996,13 @@
 
                         <!-- Center content -->
                         <div class="flex-1 flex flex-col items-center justify-center px-6 pb-4">
-                            <h3 class="text-2xl md:text-[28px] font-semibold text-gray-900 mb-10">
-                                Apa yang bisa saya bantu?
-                            </h3>
+                            <!-- Greeting (initial state) -->
+                            <h3 id="mockup-greeting" class="text-2xl md:text-[28px] font-semibold text-gray-900 mb-10">
+                                Apa yang bisa saya bantu?</h3>
+
+                            <!-- Messages (hidden initially, replaces greeting) -->
+                            <div id="mockup-messages"
+                                class="w-full max-w-2xl flex-1 overflow-y-auto py-6 space-y-5 hidden"></div>
 
                             <!-- Input Bar -->
                             <div class="w-full max-w-2xl mb-4">
@@ -1007,49 +1011,60 @@
                                     <!-- Attach -->
                                     <span
                                         class="material-symbols-outlined text-gray-500 text-[22px] cursor-pointer hover:text-gray-700 transition-colors">add</span>
-                                    <!-- Placeholder text -->
-                                    <span class="flex-1 text-gray-400 text-[15px]">Tanyakan apa saja</span>
+                                    <!-- Input -->
+                                    <input id="mockup-input" type="text"
+                                        class="flex-1 bg-transparent text-[15px] text-gray-900 outline-none focus:outline-none focus:ring-0 border-none placeholder:text-gray-400"
+                                        placeholder="Tanyakan apa saja"
+                                        onkeydown="if(event.key==='Enter')sendMockupChat()">
                                     <!-- Mic -->
                                     <span
                                         class="material-symbols-outlined text-gray-400 text-[20px] cursor-pointer hover:text-gray-600 transition-colors">mic</span>
-                                    <!-- Send button (dark circle) -->
-                                    <div
+                                    <!-- Send button dark circle -->
+                                    <div id="mockup-send-btn" onclick="sendMockupChat()"
                                         class="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors">
-                                        <span class="material-symbols-outlined text-white text-[18px]">graphic_eq</span>
+                                        <span
+                                            class="material-symbols-outlined text-white text-[18px]">arrow_upward</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Pengetahuan Perusahaan chip -->
-                            <div
+                            <div id="mockup-chip"
                                 class="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-gray-200 bg-white text-sm text-gray-800 font-medium cursor-pointer hover:bg-gray-50 transition-colors shadow-sm">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="shrink-0">
-                                    <!-- Arc: top → bottom-right (clockwise) -->
                                     <path d="M13.8 5.5Q19 7.5 18.5 13.5" stroke="#374151" stroke-width="1.5"
                                         stroke-linecap="round" fill="none" />
-                                    <!-- Arc: bottom-right → bottom-left (clockwise) -->
                                     <path d="M17 17Q12 21.5 7 17" stroke="#374151" stroke-width="1.5"
                                         stroke-linecap="round" fill="none" />
-                                    <!-- Arc: bottom-left → top (clockwise) -->
                                     <path d="M5.5 13.5Q5 7.5 10.2 5.5" stroke="#374151" stroke-width="1.5"
                                         stroke-linecap="round" fill="none" />
-                                    <!-- 3 Nodes (drawn last = on top of arcs) -->
                                     <circle cx="12" cy="4" r="2.2" fill="#374151" />
                                     <circle cx="19" cy="15.5" r="2.2" fill="#374151" />
                                     <circle cx="5" cy="15.5" r="2.2" fill="#374151" />
                                 </svg>
                                 Pengetahuan perusahaan
                             </div>
-
                         </div>
 
                         <!-- Disclaimer -->
                         <div class="text-center pb-3 text-[11px] text-gray-400 px-4">
-                            OpenAI tidak menggunakan data workspace untuk melatih modelnya.
+                            OpenAI tidak menggunakan data workspace untuk melatih modelnya
                         </div>
+
 
                     </div>
                 </div>
+                <!-- Fun Fact Note -->
+                <p class="text-center text-sm text-gray-400 mt-4 mb-0 max-w-2xl mx-auto">
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-gray-600 text-xs font-medium">
+
+                        <span class="material-symbols-outlined text-[16px] text-primary">emoji_objects</span>
+                        Fun fact: coba ketik <span class="font-semibold text-gray-700">"mau claim canva bisnis
+                            dong"</span> di kolom chat, lalu klik send! 👀
+                    </span>
+                </p>
+
             </div>
 
 
@@ -1677,10 +1692,11 @@
                                         <p class="text-xs text-gray-500 mt-0.5">Carry over existing data from your
                                             personal workspace</p>
                                     </div>
-<!-- Filled radio -->
-<div class="shrink-0 w-5 h-5 rounded-full bg-gray-900 border-2 border-gray-900 mt-0.5 flex items-center justify-center">
-    <div class="w-2 h-2 rounded-full bg-white"></div>
-</div>
+                                    <!-- Filled radio -->
+                                    <div
+                                        class="shrink-0 w-5 h-5 rounded-full bg-gray-900 border-2 border-gray-900 mt-0.5 flex items-center justify-center">
+                                        <div class="w-2 h-2 rounded-full bg-white"></div>
+                                    </div>
 
                                 </div>
 
@@ -1702,8 +1718,8 @@
                                             workspace separate. If you're on Plus, you will maintain your subscription
                                             until you cancel</p>
                                     </div>
-<!-- Empty radio -->
-<div class="shrink-0 w-5 h-5 rounded-full border-2 border-gray-300 mt-0.5"></div>
+                                    <!-- Empty radio -->
+                                    <div class="shrink-0 w-5 h-5 rounded-full border-2 border-gray-300 mt-0.5"></div>
 
                                 </div>
 
@@ -2216,6 +2232,107 @@
                     toggleMobileNav();
                 }
             }, { passive: true });
+
+            // Mockup Chat Interaction
+            window.sendMockupChat = function () {
+                var input = document.getElementById('mockup-input');
+                var message = input.value.trim();
+                if (!message) return;
+
+                // Hide greeting
+                var greeting = document.getElementById('mockup-greeting');
+                greeting.style.display = 'none';
+
+                // Show messages area
+                var msgArea = document.getElementById('mockup-messages');
+                msgArea.classList.remove('hidden');
+
+                // Add user message bubble
+                var userMsg = document.createElement('div');
+                userMsg.className = 'flex justify-end';
+                userMsg.innerHTML = '<div class="bg-gray-200/80 rounded-2xl rounded-br-md px-4 py-2.5 max-w-[80%] text-sm text-gray-900">' + message + '</div>';
+                msgArea.appendChild(userMsg);
+
+                // Clear input & disable send
+                input.value = '';
+                input.disabled = true;
+                var sendBtn = document.getElementById('mockup-send-btn');
+                sendBtn.style.opacity = '0.4';
+                sendBtn.style.pointerEvents = 'none';
+
+                // Hide chip
+                document.getElementById('mockup-chip').style.display = 'none';
+
+                // ChatGPT avatar HTML (reusable)
+                var avatarHTML = ''
+                    + '<div class="w-7 h-7 rounded-full bg-[#212121] flex items-center justify-center shrink-0 mt-0.5">'
+                    + '<svg width="16" height="16" viewBox="0 0 41 41" fill="none">'
+                    + '<path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835A9.964 9.964 0 0 0 18.306.5a10.079 10.079 0 0 0-9.614 6.977 9.967 9.967 0 0 0-6.664 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 7.516 3.35 10.078 10.078 0 0 0 9.617-6.981 9.967 9.967 0 0 0 6.663-4.834 10.079 10.079 0 0 0-1.243-11.813ZM22.498 37.886a7.474 7.474 0 0 1-4.799-1.735c.061-.033.168-.091.237-.134l7.964-4.6a1.294 1.294 0 0 0 .655-1.134V19.054l3.366 1.944a.12.12 0 0 1 .066.092v9.299a7.505 7.505 0 0 1-7.49 7.496ZM6.392 31.006a7.471 7.471 0 0 1-.894-5.023c.06.036.162.099.237.141l7.964 4.6a1.297 1.297 0 0 0 1.308 0l9.724-5.614v3.888a.12.12 0 0 1-.048.103l-8.051 4.649a7.504 7.504 0 0 1-10.24-2.744ZM4.297 13.62A7.469 7.469 0 0 1 8.2 10.333c0 .068-.004.19-.004.274v9.201a1.294 1.294 0 0 0 .654 1.132l9.723 5.614-3.366 1.944a.12.12 0 0 1-.114.012L7.044 23.86a7.504 7.504 0 0 1-2.747-10.24Zm27.658 6.437-9.724-5.615 3.367-1.943a.121.121 0 0 1 .113-.012l8.051 4.649a7.498 7.498 0 0 1-1.158 13.528v-9.476a1.293 1.293 0 0 0-.649-1.131Zm3.35-5.043c-.059-.037-.162-.099-.236-.141l-7.965-4.6a1.298 1.298 0 0 0-1.308 0l-9.723 5.614v-3.888a.12.12 0 0 1 .048-.103l8.05-4.645a7.497 7.497 0 0 1 11.135 7.763Zm-21.063 6.929-3.367-1.944a.12.12 0 0 1-.065-.092v-9.299a7.497 7.497 0 0 1 12.293-5.756 6.94 6.94 0 0 0-.236.134l-7.965 4.6a1.294 1.294 0 0 0-.654 1.132l-.006 11.225Zm1.829-3.943 4.33-2.501 4.332 2.5v5l-4.331 2.5-4.331-2.5V18Z" fill="white"/>'
+                    + '</svg>'
+                    + '</div>';
+
+                // Canva icon HTML
+                var canvaIconHTML = ''
+                    + '<div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform duration-300">'
+                    + '<svg width="36" height="36" viewBox="0 0 500 500">'
+                    + '<defs><linearGradient id="cg" x1="186.57" y1="103.66" x2="338.99" y2="455.3">'
+                    + '<stop offset="0" stop-color="#01C3CC"/>'
+                    + '<stop offset=".51" stop-color="#4569E0"/>'
+                    + '<stop offset="1" stop-color="#7428EF"/>'
+                    + '</linearGradient></defs>'
+                    + '<circle cx="250" cy="250" r="225" fill="url(#cg)"/>'
+                    + '<path d="M359.773,300.804c0.361-4.351-5.443-5.99-7.443-2.175c-19.959,39.196-52.072,66.959-89.639,69.31c-30.299,1.814-56.979-17.237-67.32-47.722c-9.979-29.577-9.794-54.979-3.629-89.639c9.258-51.897,42.639-107.783,94.897-105.423c21.959,0.907,32.484,13.969,32.484,35.567c0,25.948-14.516,38.103-14.516,47.907c0,2.907,2.536,5.99,7.443,5.99c19.959,0,43.547-23.588,43.547-55.526c0-32.114-25.948-55.526-72.031-55.526c-76.031,0-143.526,71.309-143.526,169.289c0,78.021,46.268,123.567,112.866,123.567c23.949,0,57.34-14.155,84.196-45.546C361.773,322.402,359.773,300.804,359.773,300.804z" fill="white"/>'
+                    + '</svg>'
+                    + '</div>';
+
+                // Show typing indicator
+                var typingDiv = document.createElement('div');
+                typingDiv.className = 'flex items-start gap-2.5';
+                typingDiv.innerHTML = ''
+                    + avatarHTML
+                    + '<div class="flex gap-1.5 items-center px-3 py-3">'
+                    + '<div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay:0ms"></div>'
+                    + '<div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay:150ms"></div>'
+                    + '<div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay:300ms"></div>'
+                    + '</div>';
+                msgArea.appendChild(typingDiv);
+                msgArea.scrollTop = msgArea.scrollHeight;
+
+                // After delay, show AI response
+                setTimeout(function () {
+                    typingDiv.remove();
+
+                    var botMsg = document.createElement('div');
+                    botMsg.className = 'flex items-start gap-2.5';
+                    botMsg.style.opacity = '0';
+                    botMsg.style.transform = 'translateY(8px)';
+                    botMsg.style.transition = 'opacity 400ms ease, transform 400ms ease';
+                    botMsg.innerHTML = ''
+                        + avatarHTML
+                        + '<div class="text-sm text-gray-800 leading-relaxed space-y-3 max-w-[85%]">'
+                        + '<p>Siaap! 🎉 Ini link invite <strong>Canva Business</strong> kamu:</p>'
+                        + '<a href="https://www.canva.com/brand/join?token=gk2l40eK_jaP8GuFUfAPDw&referrer=team-invite" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 w-full max-w-xs px-4 py-3 rounded-2xl bg-gradient-to-br from-[#7d2ae8]/5 via-[#00c4cc]/5 to-[#7d2ae8]/10 border border-[#7d2ae8]/20 hover:border-[#7d2ae8]/40 hover:shadow-lg hover:shadow-[#7d2ae8]/10 transition-all duration-300">'
+                        + canvaIconHTML
+                        + '<div class="flex flex-col">'
+                        + '<span class="text-[13px] font-bold text-gray-900 group-hover:text-[#7d2ae8] transition-colors">Gabung Canva Business</span>'
+                        + '<span class="text-[11px] text-gray-400">Klik untuk join workspace</span>'
+                        + '</div>'
+                        + '<span class="material-symbols-outlined text-gray-300 text-[18px] ml-auto group-hover:text-[#7d2ae8] group-hover:translate-x-0.5 transition-all">arrow_forward</span>'
+                        + '</a>'
+                        + '<p class="text-gray-500 text-xs leading-relaxed">Klik link di atas buat join workspace Canva Business. Kalau ada kendala, langsung hubungi admin ya! 😊</p>'
+                        + '</div>';
+                    msgArea.appendChild(botMsg);
+
+                    // Animate in
+                    requestAnimationFrame(function () {
+                        botMsg.style.opacity = '1';
+                        botMsg.style.transform = 'translateY(0)';
+                    });
+
+                    msgArea.scrollTop = msgArea.scrollHeight;
+                }, 1800);
+            };
+
 
 
         })();
