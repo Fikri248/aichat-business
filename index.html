@@ -997,8 +997,12 @@
                         <!-- Center content -->
                         <div id="mockup-content" class="flex-1 flex flex-col items-center justify-center px-4 pb-4">
                             <!-- Greeting (initial state) -->
-                            <h3 id="mockup-greeting" class="text-2xl md:text-[28px] font-semibold text-gray-900 mb-10">
-                                Apa yang bisa saya bantu?</h3>
+                            <h3 id="mockup-greeting"
+                                class="font-semibold text-gray-900 mb-10 text-center whitespace-nowrap"
+                                style="font-size:clamp(1.125rem, 4vw, 1.75rem)">
+                                Apa yang bisa saya bantu?
+                            </h3>
+
 
                             <!-- Messages (hidden initially, replaces greeting) -->
                             <div id="mockup-messages"
@@ -1007,25 +1011,26 @@
                             <!-- Input Bar -->
                             <div class="w-full max-w-2xl mb-4">
                                 <div
-                                    class="bg-gray-100/80 border border-gray-200/60 rounded-2xl px-4 py-3.5 flex items-center gap-3">
+                                    class="bg-gray-100/80 border border-gray-200/60 rounded-2xl px-4 py-3.5 flex items-center gap-2">
                                     <!-- Attach -->
                                     <span
-                                        class="material-symbols-outlined text-gray-500 text-[22px] cursor-pointer hover:text-gray-700 transition-colors">add</span>
+                                        class="material-symbols-outlined text-gray-500 text-[22px] cursor-pointer hover:text-gray-700 transition-colors shrink-0">add</span>
                                     <!-- Input -->
                                     <input id="mockup-input" type="text"
-                                        class="flex-1 bg-transparent text-[15px] text-gray-900 outline-none focus:outline-none focus:ring-0 border-none placeholder:text-gray-400"
+                                        class="flex-1 min-w-0 bg-transparent text-[15px] text-gray-900 outline-none focus:outline-none focus:ring-0 border-none placeholder:text-gray-400"
                                         placeholder="Tanyakan apa saja"
                                         onkeydown="if(event.key==='Enter')sendMockupChat()">
                                     <!-- Mic -->
                                     <span
-                                        class="material-symbols-outlined text-gray-400 text-[20px] cursor-pointer hover:text-gray-600 transition-colors">mic</span>
-                                    <!-- Send button dark circle -->
+                                        class="material-symbols-outlined text-gray-400 text-[20px] cursor-pointer hover:text-gray-600 transition-colors shrink-0">mic</span>
+                                    <!-- Send button (dark circle) -->
                                     <div id="mockup-send-btn" onclick="sendMockupChat()"
-                                        class="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors">
+                                        class="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors shrink-0">
                                         <span
                                             class="material-symbols-outlined text-white text-[18px]">arrow_upward</span>
                                     </div>
                                 </div>
+
                             </div>
 
                             <!-- Pengetahuan Perusahaan chip -->
