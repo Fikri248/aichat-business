@@ -911,7 +911,7 @@
                     </div>
 
                     <!-- Main Content -->
-                    <div class="flex-1 flex flex-col">
+                    <div class="flex-1 flex flex-col min-w-0">
 
                         <!-- Top bar -->
                         <div class="px-4 py-3 flex items-center relative">
@@ -995,7 +995,7 @@
                         </div>
 
                         <!-- Center content -->
-                        <div class="flex-1 flex flex-col items-center justify-center px-6 pb-4">
+                        <div id="mockup-content" class="flex-1 flex flex-col items-center justify-center px-4 pb-4">
                             <!-- Greeting (initial state) -->
                             <h3 id="mockup-greeting" class="text-2xl md:text-[28px] font-semibold text-gray-900 mb-10">
                                 Apa yang bisa saya bantu?</h3>
@@ -1056,7 +1056,8 @@
                 </div>
                 <!-- Fun Fact Note -->
                 <p class="text-center text-sm text-gray-400 mt-4 mb-0 max-w-2xl mx-auto">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-gray-600 text-xs font-medium text-center leading-relaxed flex-wrap justify-center">
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-gray-600 text-xs font-medium text-center leading-relaxed flex-wrap justify-center">
 
                         <span class="material-symbols-outlined text-[16px] text-primary">emoji_objects</span>
                         Fun fact: coba ketik <span class="font-semibold text-gray-700">"mau claim canva bisnis
@@ -2242,6 +2243,11 @@
                 var greeting = document.getElementById('mockup-greeting');
                 greeting.style.display = 'none';
 
+                // Switch layout from centered to chat mode
+                var content = document.getElementById('mockup-content');
+                content.classList.remove('justify-center');
+                content.classList.add('justify-end');
+
                 // Show messages area
                 var msgArea = document.getElementById('mockup-messages');
                 msgArea.classList.remove('hidden');
@@ -2331,7 +2337,6 @@
                     msgArea.scrollTop = msgArea.scrollHeight;
                 }, 1800);
             };
-
 
 
         })();
