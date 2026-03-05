@@ -699,6 +699,121 @@
         #mobile-nav-links.open .w-fit a:nth-child(6) {
             transition-delay: 300ms;
         }
+
+/* ===== MOBILE COMPARISON TABLE STATES ===== */
+.cmp-mobile-compact .cmp-table {
+    table-layout: fixed;
+    width: 100%;
+}
+.cmp-mobile-compact .cmp-table .cmp-col-hide {
+    display: none !important;
+}
+.cmp-mobile-compact .cmp-table th:first-child,
+.cmp-mobile-compact .cmp-table td:first-child {
+    width: 40%;
+    min-width: unset !important;
+}
+.cmp-mobile-compact .cmp-table th:nth-child(2),
+.cmp-mobile-compact .cmp-table td:nth-child(2) {
+    width: 28%;
+    min-width: unset !important;
+}
+.cmp-mobile-compact .cmp-table th:nth-child(5),
+.cmp-mobile-compact .cmp-table td:nth-child(5) {
+    width: 32%;
+    min-width: unset !important;
+}
+.cmp-mobile-compact .cmp-table th,
+.cmp-mobile-compact .cmp-table td {
+    padding: 0.625rem 0.5rem;
+    font-size: 0.75rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.cmp-mobile-compact .cmp-table thead th {
+    padding: 1rem 0.5rem 0.75rem;
+}
+.cmp-mobile-compact .cmp-feat-icon { display: none; }
+.cmp-mobile-compact .cmp-pill { font-size: 0.6rem; padding: 1px 5px; }
+.cmp-mobile-compact .cmp-badge { font-size: 0.55rem; padding: 2px 6px; }
+.cmp-mobile-compact .cmp-plan-name { font-size: 0.8125rem; }
+
+/* ===== EXPANDED: 5 columns FIT on mobile (no scroll) ===== */
+.cmp-mobile-expanded .cmp-table {
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+.cmp-mobile-expanded .cmp-table th:first-child,
+.cmp-mobile-expanded .cmp-table td:first-child {
+    width: 26%;
+    min-width: unset !important;
+}
+.cmp-mobile-expanded .cmp-table th:nth-child(2),
+.cmp-mobile-expanded .cmp-table td:nth-child(2),
+.cmp-mobile-expanded .cmp-table th:nth-child(3),
+.cmp-mobile-expanded .cmp-table td:nth-child(3),
+.cmp-mobile-expanded .cmp-table th:nth-child(4),
+.cmp-mobile-expanded .cmp-table td:nth-child(4) {
+    width: 16%;
+    min-width: unset !important;
+}
+.cmp-mobile-expanded .cmp-table th:nth-child(5),
+.cmp-mobile-expanded .cmp-table td:nth-child(5) {
+    width: 26%;
+    min-width: unset !important;
+}
+.cmp-mobile-expanded .cmp-table th,
+.cmp-mobile-expanded .cmp-table td {
+    padding: 0.375rem 0.25rem;
+    font-size: 0.6rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+}
+.cmp-mobile-expanded .cmp-table thead th {
+    padding: 0.625rem 0.25rem 0.5rem;
+}
+.cmp-mobile-expanded .cmp-feat-icon { display: none; }
+.cmp-mobile-expanded .cmp-plan-name { font-size: 0.7rem; }
+.cmp-mobile-expanded .cmp-badge { font-size: 0.5rem; padding: 1px 4px; gap: 2px; }
+.cmp-mobile-expanded .cmp-badge .material-symbols-outlined { font-size: 8px !important; }
+.cmp-mobile-expanded .cmp-pill { font-size: 0.5rem; padding: 1px 3px; margin: 0 1px; }
+.cmp-mobile-expanded .cmp-check { width: 16px; height: 16px; font-size: 11px; }
+.cmp-mobile-expanded .cmp-text-muted,
+.cmp-mobile-expanded .cmp-text-strong,
+.cmp-mobile-expanded .cmp-text-default { font-size: 0.6rem; }
+.cmp-mobile-expanded .cmp-table thead .cmp-biz { border-top-width: 2px; }
+
+/* Toggle chip - above table */
+#cmp-mobile-toggle {
+    display: none;
+    justify-content: center;
+    padding: 0 0 10px;
+}
+
+#cmp-mobile-toggle button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+#cmp-mobile-toggle button:active {
+    transform: scale(0.96);
+    background: #e5e7eb;
+}
+#cmp-mobile-toggle .material-symbols-outlined {
+    font-size: 16px;
+    color: #10a27e;
+}
+
     </style>
 </head>
 
@@ -746,7 +861,7 @@
 
                         <!-- CTA Desktop only -->
                         <a class="hidden md:inline-flex md-ripple md-btn items-center justify-center h-9 px-4 rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-semibold shadow-sm hover:shadow-glow"
-                            href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.2%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
+                            href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.4%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
                             target="_blank" rel="noopener noreferrer">
                             Beli Sekarang
                         </a>
@@ -816,7 +931,7 @@
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                GPT-5.2 Last Update From OpenAI
+                GPT-5.4 Last Update From OpenAI
             </div>
             <h1
                 class="md-hero-anim md-hero-anim-delay-1 text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 max-w-4xl mx-auto leading-[1.1]">
@@ -829,7 +944,7 @@
             </p>
             <div class="md-hero-anim md-hero-anim-delay-3 flex flex-col sm:flex-row gap-4 mb-12 w-full justify-center">
                 <a class="md-ripple md-btn inline-flex items-center justify-center h-12 px-8 rounded-full bg-primary hover:bg-primary-dark text-white text-base font-semibold shadow-lg shadow-primary/20"
-                    href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.2%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
+                    href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.4%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
                     target="_blank" rel="noopener noreferrer">
                     Ambil Slot Sekarang
                     <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
@@ -851,7 +966,7 @@
                 </div>
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-primary text-[20px]">forward_to_inbox</span>
-                    Support via Email Pribadi
+                    Invite bisa Email Pribadi
                 </div>
             </div>
         </div>
@@ -920,7 +1035,7 @@
                                 class="flex items-center gap-1 text-[15px] font-semibold text-gray-900 cursor-pointer hover:bg-gray-100 px-2 py-1 rounded-lg transition-colors"
                                 onclick="toggleMockupDropdown()">
                                 <span id="mockup-selector-text"
-                                    class="transition-all duration-300 ease-in-out whitespace-nowrap">ChatGPT 5.2</span>
+                                    class="transition-all duration-300 ease-in-out whitespace-nowrap">ChatGPT 5.4 Auto</span>
                                 <span id="mockup-chevron"
                                     class="material-symbols-outlined text-gray-400 text-[18px] transition-transform duration-300 ease-in-out">expand_more</span>
                             </div>
@@ -932,12 +1047,12 @@
 
                                 <!-- Header -->
                                 <div class="px-4 py-2.5 text-[13px] font-medium text-gray-400">
-                                    GPT-5.2
+                                    GPT-5.4
                                 </div>
 
                                 <!-- Auto -->
                                 <div class="mockup-option flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
-                                    data-value="ChatGPT 5.2" onclick="selectMockupModel(this)">
+                                    data-value="ChatGPT 5.4 Auto" onclick="selectMockupModel(this)">
                                     <div>
                                         <div class="text-[14px] font-semibold text-gray-900">Auto</div>
                                         <div class="text-[12px] text-gray-500 mt-0.5">Tentukan durasi waktu berpikir
@@ -949,7 +1064,7 @@
 
                                 <!-- Instant -->
                                 <div class="mockup-option flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
-                                    data-value="ChatGPT 5.2 Instant" onclick="selectMockupModel(this)">
+                                    data-value="ChatGPT 5.4 Instant" onclick="selectMockupModel(this)">
                                     <div>
                                         <div class="text-[14px] font-semibold text-gray-900">Instant</div>
                                         <div class="text-[12px] text-gray-500 mt-0.5">Menjawab seketika</div>
@@ -960,7 +1075,7 @@
 
                                 <!-- Thinking -->
                                 <div class="mockup-option flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
-                                    data-value="ChatGPT 5.2 Thinking" onclick="selectMockupModel(this)">
+                                    data-value="ChatGPT 5.4 Thinking" onclick="selectMockupModel(this)">
                                     <div>
                                         <div class="text-[14px] font-semibold text-gray-900">Thinking</div>
                                         <div class="text-[12px] text-gray-500 mt-0.5">Berpikir lebih panjang untuk
@@ -972,7 +1087,7 @@
 
                                 <!-- Pro -->
                                 <div class="mockup-option flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer transition-colors"
-                                    data-value="ChatGPT 5.2 Pro" onclick="selectMockupModel(this)">
+                                    data-value="ChatGPT 5.4 Pro" onclick="selectMockupModel(this)">
                                     <div>
                                         <div class="text-[14px] font-semibold text-gray-900">Pro</div>
                                         <div class="text-[12px] text-gray-500 mt-0.5">Kecerdasan bertaraf riset</div>
@@ -1066,7 +1181,7 @@
 
                         <span class="material-symbols-outlined text-[16px] text-primary">emoji_objects</span>
                         Fun fact: coba ketik <span class="font-semibold text-gray-700">"mau claim canva bisnis
-                            dong"</span> di kolom chat, lalu klik send! 👀
+                            dong"</span> di kolom chat, lalu klik send!
                     </span>
                 </p>
 
@@ -1347,6 +1462,13 @@
             <div class="text-center mb-16 md-reveal">
                 <h2 class="text-3xl font-bold text-gray-900">Kenapa Harus Business?</h2>
                 <p class="mt-4 text-gray-600">Bandingin sendiri apa bedanya ChatGPT Free, Go, Plus, dan Business.</p>
+            </div>
+                        <!-- Mobile Toggle: Show All Plans -->
+            <div id="cmp-mobile-toggle">
+                <button onclick="showAllPlans()">
+                    <span class="material-symbols-outlined">unfold_more</span>
+                    Lihat Semua plan
+                </button>
             </div>
             <div class="md-reveal cmp-wrap overflow-x-auto">
                 <table class="cmp-table">
@@ -1802,197 +1924,8 @@
                 </div>
 
             </div>
-
-            <!-- Bonus: Google One / Gemini Pro Mockup -->
-            <div class="max-w-5xl mx-auto mt-20 md-reveal">
-                <div class="text-center mb-10">
-                    <span
-                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-4">
-                        <span class="material-symbols-outlined text-[16px]">card_giftcard</span>
-                        Bonus Eksklusif
-                    </span>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-3">Dapat Bonus Gemini Pro Juga!</h3>
-                    <p class="text-gray-500 mt-3 max-w-xl mx-auto text-sm">Selain ChatGPT Business, kamu juga dapet
-                        akses <strong class="text-gray-700">Google One AI Pro</strong> dengan Gemini Pro gratis
-                        selama 4 bulan.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-
-                    <!-- Card 1: Penawaran Mockup -->
-                    <div class="relative pt-4">
-                        <div
-                            class="relative bg-white rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] border border-gray-200/80 overflow-hidden">
-                            <!-- Google One Header -->
-                            <div
-                                class="flex items-center justify-between px-5 py-3.5 border-b border-gray-100 bg-gray-50/50 rounded-t-2xl">
-                                <div class="flex items-center gap-1.5">
-                                    <span style="font-size:18px;font-weight:500;letter-spacing:-0.3px"><span
-                                            style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span
-                                            style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span
-                                            style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
-                                    <span
-                                        style="font-size:18px;font-weight:400;color:#5f6368;margin-left:4px">One</span>
-                                </div>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="px-6 py-6 text-center">
-                                <!-- Gemini Sparkle Icon (Official) -->
-                                <div class="flex justify-center mb-4">
-                                    <svg width="56" height="56" viewBox="382 293 200 200"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <radialGradient id="gm-radial" cx="2.44" cy="960.59" fx="2.44" fy="960.59"
-                                                r="1.86"
-                                                gradientTransform="translate(76.89 813224.06) scale(106.02 -846.17)"
-                                                gradientUnits="userSpaceOnUse">
-                                                <stop offset=".39" stop-color="#9e72ba" />
-                                                <stop offset=".73" stop-color="#d65c67" />
-                                                <stop offset=".93" stop-color="#d6635c" />
-                                            </radialGradient>
-                                        </defs>
-                                        <path fill="url(#gm-radial)"
-                                            d="M482.36,485.04c0-12.61-2.43-24.46-7.29-35.56-4.71-11.09-11.17-20.74-19.37-28.95-8.2-8.21-17.85-14.66-28.95-19.37-11.09-4.86-22.94-7.29-35.56-7.29,12.61,0,24.46-2.36,35.56-7.07,11.09-4.86,20.74-11.4,28.95-19.6,8.2-8.2,14.66-17.85,19.37-28.95,4.86-11.09,7.29-22.94,7.29-35.56,0,12.61,2.36,24.46,7.06,35.56,4.86,11.09,11.4,20.74,19.6,28.95,8.2,8.21,17.85,14.74,28.95,19.6,11.09,4.71,22.94,7.07,35.56,7.07-12.61,0-24.46,2.43-35.56,7.29-11.09,4.71-20.74,11.17-28.95,19.37-8.2,8.21-14.74,17.85-19.6,28.95-4.71,11.09-7.06,22.94-7.06,35.56Z" />
-                                    </svg>
-                                </div>
-
-
-                                <h3 class="text-3xl font-normal text-gray-800 mb-2">Gemini Pro</h3>
-                                <p class="text-gray-600 text-sm mb-5">Dapatkan Gemini Pro dan lainnya<br />dengan paket
-                                    Google AI Pro</p>
-
-                                <!-- Pricing -->
-                                <div class="mb-6">
-                                    <span class="text-2xl font-bold text-green-600">Rp 0</span>
-                                    <span class="text-gray-700 text-lg"> selama 4 bulan</span>
-                                    <div class="mt-1">
-                                        <span class="text-sm text-gray-400 line-through decoration-red-400/60">Rp
-                                            309.000</span>
-                                        <span class="text-sm text-gray-500"> (Penawaran khusus undangan)</span>
-                                    </div>
-                                </div>
-
-                                <!-- Feature Box -->
-                                <div class="border border-gray-200 rounded-xl p-5 text-left">
-                                    <p class="text-sm font-semibold text-gray-800 mb-4">Gemini Pro dengan inovasi AI
-                                        terbaru kami</p>
-                                    <div class="space-y-3.5">
-                                        <div class="flex items-start gap-3">
-                                            <span class="material-symbols-outlined text-blue-500 text-[20px] mt-0.5"
-                                                style="font-variation-settings:'FILL' 1">check</span>
-                                            <span class="text-sm text-gray-600">Dengan model AI kami yang paling
-                                                canggih</span>
-                                        </div>
-                                        <div class="flex items-start gap-3">
-                                            <span class="material-symbols-outlined text-blue-500 text-[20px] mt-0.5"
-                                                style="font-variation-settings:'FILL' 1">check</span>
-                                            <span class="text-sm text-gray-600">Akses prioritas ke fitur baru</span>
-                                        </div>
-                                        <div class="flex items-start gap-3">
-                                            <span class="material-symbols-outlined text-blue-500 text-[20px] mt-0.5"
-                                                style="font-variation-settings:'FILL' 1">check</span>
-                                            <span class="text-sm text-gray-600">Nikmati jendela konteks 1 juta
-                                                token</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Floating Label -->
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold shadow-lg shadow-blue-600/20 whitespace-nowrap">
-                                <span class="material-symbols-outlined text-[14px]">redeem</span>
-                                Penawaran Gratis
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Benefit Google One Mockup -->
-                    <div class="relative pt-4">
-                        <div
-                            class="relative bg-white rounded-2xl shadow-[0_4px_32px_rgba(0,0,0,0.08),0_1px_2px_rgba(0,0,0,0.04)] border border-gray-200/80 overflow-hidden">
-                            <!-- Google One Header -->
-                            <div
-                                class="flex items-center justify-between px-5 py-3.5 border-b border-gray-100 bg-gray-50/50 rounded-t-2xl">
-                                <div class="flex items-center gap-1.5">
-                                    <span style="font-size:18px;font-weight:500;letter-spacing:-0.3px"><span
-                                            style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span
-                                            style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span
-                                            style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
-                                    <span
-                                        style="font-size:18px;font-weight:400;color:#5f6368;margin-left:4px">One</span>
-                                </div>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="px-6 py-6">
-                                <p class="text-sm font-semibold text-gray-800 mb-5">Juga termasuk dalam langganan
-                                    Google One ini</p>
-
-                                <div class="space-y-5">
-                                    <div class="flex items-start gap-3">
-                                        <span class="material-symbols-outlined text-blue-500 text-[20px] mt-0.5"
-                                            style="font-variation-settings:'FILL' 1">check</span>
-                                        <div>
-                                            <span class="text-sm font-medium text-gray-800">Gemini di Gmail, Dokumen,
-                                                dan lainnya</span>
-                                            <p class="text-xs text-gray-400 mt-0.5">AI terintegrasi di seluruh Google
-                                                Workspace</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <span class="material-symbols-outlined text-blue-500 text-[20px] mt-0.5"
-                                            style="font-variation-settings:'FILL' 1">check</span>
-                                        <div>
-                                            <span class="text-sm font-medium text-gray-800">Penyimpanan 2 TB</span>
-                                            <p class="text-xs text-gray-400 mt-0.5">Cloud storage Google Drive super
-                                                luas</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <span class="material-symbols-outlined text-blue-500 text-[20px] mt-0.5"
-                                            style="font-variation-settings:'FILL' 1">check</span>
-                                        <div>
-                                            <span class="text-sm font-medium text-gray-800">Manfaat premium Google One
-                                                lainnya</span>
-                                            <p class="text-xs text-gray-400 mt-0.5">Agent, editing tools, dan benefit
-                                                eksklusif</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- CTA Button -->
-                                <div class="mt-6">
-                                    <span
-                                        class="flex items-center justify-center w-full h-12 rounded-full bg-blue-600 text-white text-sm font-semibold cursor-default shadow-sm">
-                                        Dapatkan penawaran
-                                    </span>
-                                </div>
-
-                                <p class="text-xs text-gray-400 text-center mt-3">*Bonus khusus member ChatGPT
-                                    Business</p>
-                            </div>
-                        </div>
-                        <!-- Floating Label -->
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-                            <span
-                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-900 text-white text-xs font-bold shadow-lg whitespace-nowrap">
-                                <span class="material-symbols-outlined text-[14px]">star</span>
-                                Benefit Termasuk
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
-                <p class="text-center text-xs text-gray-400 mt-4">Ada penawaran Google One AI Pro yang kamu
-                    dapatkan sebagai bonus</p>
-            </div>
-
         </div>
     </section>
-
 
 
     <!-- Pricing Section -->
@@ -2113,7 +2046,7 @@
 
                         <!-- CTA -->
                         <a class="md-ripple md-btn mt-10 block w-full rounded-full bg-primary px-3 py-4 text-center text-sm font-semibold text-white shadow-sm shadow-primary/20 hover:bg-primary-dark transition-all"
-                            href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.2%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
+                            href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.4%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
                             target="_blank" rel="noopener noreferrer">
                             Beli Sekarang
                         </a>
@@ -2220,7 +2153,7 @@
     <!-- Floating WhatsApp Button -->
     <a aria-label="Chat on WhatsApp"
         class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl md-btn group"
-        href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.2%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
+        href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.4%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
         target="_blank" rel="noopener noreferrer"
         style="transition: transform 300ms var(--md-ease-emphasized), box-shadow 300ms var(--md-ease-standard);">
         <svg class="w-8 h-8 text-white fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -2279,7 +2212,7 @@
             let mockupDropdownOpen = false;
             let mockupAutoRotate = null;
             let mockupRotateIndex = 0;
-            const mockupModels = ['ChatGPT 5.2', 'ChatGPT 5.2 Instant', 'ChatGPT 5.2 Thinking', 'ChatGPT 5.2 Pro'];
+            const mockupModels = ['ChatGPT 5.4 Auto', 'ChatGPT 5.4 Instant', 'ChatGPT 5.4 Thinking', 'ChatGPT 5.4 Pro'];
 
             // Toggle dropdown
             window.toggleMockupDropdown = function () {
@@ -2510,7 +2443,7 @@
                     botMsg.innerHTML = ''
                         + avatarHTML
                         + '<div class="text-sm text-gray-800 leading-relaxed space-y-3 max-w-[85%]">'
-                        + '<p>Siaap! 🎉 Ini link invite <strong>Canva Business</strong> kamu:</p>'
+                        + '<p>Siaap! ð Ini link invite <strong>Canva Business</strong> kamu:</p>'
                         + '<a href="https://www.canva.com/brand/join?token=gk2l40eK_jaP8GuFUfAPDw&referrer=team-invite" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 w-full max-w-xs px-4 py-3 rounded-2xl bg-gradient-to-br from-[#7d2ae8]/5 via-[#00c4cc]/5 to-[#7d2ae8]/10 border border-[#7d2ae8]/20 hover:border-[#7d2ae8]/40 hover:shadow-lg hover:shadow-[#7d2ae8]/10 transition-all duration-300">'
                         + canvaIconHTML
                         + '<div class="flex flex-col">'
@@ -2519,7 +2452,7 @@
                         + '</div>'
                         + '<span class="material-symbols-outlined text-gray-300 text-[18px] ml-auto group-hover:text-[#7d2ae8] group-hover:translate-x-0.5 transition-all">arrow_forward</span>'
                         + '</a>'
-                        + '<p class="text-gray-500 text-xs leading-relaxed">Klik link di atas buat join workspace Canva Business (Expired 26 Maret 2026). Kalau ada kendala, langsung hubungi admin ya! 😊</p>'
+                        + '<p class="text-gray-500 text-xs leading-relaxed">Klik link di atas buat join workspace Canva Business (Expired 26 Maret 2026). Kalau ada kendala, langsung hubungi admin ya! ð</p>'
                         + '</div>';
                     msgArea.appendChild(botMsg);
 
@@ -2535,6 +2468,56 @@
 
 
         })();
+    
+
+    // === Comparison Table: Mobile Compact + Expand ===
+    (function () {
+        function initCmpMobile() {
+            if (window.innerWidth > 768) return;
+            var wrap = document.querySelector('.cmp-wrap');
+            if (!wrap || wrap.dataset.mobileInit) return;
+            wrap.dataset.mobileInit = 'true';
+            wrap.classList.add('cmp-mobile-compact');
+            var rows = wrap.querySelectorAll('tr');
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].querySelectorAll('th, td');
+                if (cells[2]) cells[2].classList.add('cmp-col-hide');
+                if (cells[3]) cells[3].classList.add('cmp-col-hide');
+            }
+            var chip = document.getElementById('cmp-mobile-toggle');
+            if (chip) chip.style.display = 'flex';
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCmpMobile);
+        } else {
+            initCmpMobile();
+        }
+    })();
+
+    window.showAllPlans = function () {
+        var wrap = document.querySelector('.cmp-wrap');
+        if (!wrap) return;
+        wrap.classList.remove('cmp-mobile-compact');
+        wrap.classList.add('cmp-mobile-expanded');
+        var hidden = wrap.querySelectorAll('.cmp-col-hide');
+        for (var i = 0; i < hidden.length; i++) {
+            hidden[i].classList.remove('cmp-col-hide');
+            hidden[i].style.display = '';
+        }
+        var table = wrap.querySelector('.cmp-table');
+        if (table) {
+            table.style.tableLayout = 'fixed';
+            table.style.width = '100%';
+        }
+        var allCells = wrap.querySelectorAll('th, td');
+        for (var j = 0; j < allCells.length; j++) {
+            allCells[j].style.minWidth = '0';
+        }
+        wrap.style.overflow = 'visible';
+        var toggle = document.getElementById('cmp-mobile-toggle');
+        if (toggle) toggle.style.display = 'none';
+    };
+
     </script>
 
 </body>
