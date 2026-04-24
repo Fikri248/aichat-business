@@ -47,7 +47,7 @@ document.querySelectorAll('.md-ripple').forEach(el => {
             let mockupDropdownOpen = false;
             let mockupAutoRotate = null;
             let mockupRotateIndex = 0;
-            const mockupModels = ['ChatGPT 5.4 Auto', 'ChatGPT 5.4 Instant', 'ChatGPT 5.4 Thinking', 'ChatGPT 5.4 Pro'];
+            const mockupModels = ['ChatGPT 5.5 Auto', 'ChatGPT 5.5 Instant', 'ChatGPT 5.5 Thinking', 'ChatGPT 5.5 Pro'];
 
             // Toggle dropdown
             window.toggleMockupDropdown = function () {
