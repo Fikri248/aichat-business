@@ -74,7 +74,7 @@
                         <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
                             href="#cara-kerja">Cara Order</a>
                         <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-                            href="#pricing">Harga</a>
+                            href="#promo">Harga</a>
                         <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
                             href="#faq">FAQ</a>
                         <a class="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
@@ -85,8 +85,7 @@
 
                         <!-- CTA Desktop only -->
                         <a class="hidden md:inline-flex md-ripple md-btn items-center justify-center h-9 px-4 rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-semibold shadow-sm hover:shadow-glow"
-                            href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.5%20yang%2015K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
-                            target="_blank" rel="noopener noreferrer">
+                            href="#promo">
                             Beli Sekarang
                         </a>
                         <!-- Hamburger Mobile only -->
@@ -166,7 +165,7 @@
                 Akses GPT-5 terbaru, Deep Research, sampe Codex dengan harga hemat dari harga asli. Setelah bayar akan
                 langsung aktif lewat invite link ke email kamu.
             </p>
-            <div class="md-hero-anim md-hero-anim-delay-3 flex flex-col sm:flex-row gap-4 mb-12 w-full justify-center">
+            <!-- <div class="md-hero-anim md-hero-anim-delay-3 flex flex-col sm:flex-row gap-4 mb-12 w-full justify-center">
                 <a class="md-ripple md-btn inline-flex items-center justify-center h-12 px-8 rounded-full bg-primary hover:bg-primary-dark text-white text-base font-semibold shadow-lg shadow-primary/20"
                     href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Bisnis%20GPT-5.5%20yang%2015K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
                     target="_blank" rel="noopener noreferrer">
@@ -177,7 +176,7 @@
                     href="#fitur">
                     Lihat Fitur
                 </a>
-            </div>
+            </div> -->
             <div
                 class="md-hero-anim md-hero-anim-delay-4 flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-gray-500">
                 <div class="flex items-center gap-2">
@@ -376,10 +375,9 @@
                             <!-- Pengetahuan Perusahaan chip -->
                             <div id="mockup-chip"
                                 class="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-gray-200 bg-white text-sm text-gray-800 font-medium cursor-pointer hover:bg-gray-50 transition-colors shadow-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    class="shrink-0 text-gray-900" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" class="shrink-0 text-gray-900" aria-hidden="true">
                                     <path d="M5.4 11.2C6.1 8.3 8.7 6.1 11.7 5.7" />
                                     <path d="M16.3 6.6C18.5 8.1 19.4 11.1 18.5 13.8" />
                                     <path d="M15.7 18.1C13.2 19.6 9.8 19.3 7.5 17.2" />
@@ -1203,7 +1201,7 @@
 
 
     <!-- Pricing Section -->
-    <section class="py-20 bg-background-subtle" id="pricing">
+    <section class="py-20 bg-background-subtle" id="pricing" hidden>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
 
@@ -1336,6 +1334,186 @@
         </div>
     </section>
 
+    <!-- Promo Plus Section -->
+    <section class="py-20 bg-white" id="promo">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Header -->
+            <div class="text-center mb-12 md-reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Pilih Plan yang Sesuai Kebutuhan Kamu
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Mau yang <span class="font-semibold text-gray-800">hemat budget?</span> Plus bisa kamu dapetin cuma
+                    <span class="text-indigo-600 font-semibold">Rp 10.000/bulan</span>, jauh lebih murah dari harga
+                    normal.
+                    Atau langsung gaskeun <span class="font-semibold text-gray-800">Business</span> karena fitur jauh
+                    lebih lengkap
+                    dengan harga tetap <span class="text-primary font-semibold">Rp 15.000/bulan</span>.
+                </p>
+            </div>
+
+            <!-- Card Grid: Plus vs Business -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md-reveal">
+
+                <!-- Card Plus (Promo) -->
+                <div class="relative rounded-3xl border border-indigo-200 bg-indigo-50/60 p-8 flex flex-col">
+                    <!-- Badge -->
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-indigo-100 border border-indigo-300 px-4 py-1 text-xs font-bold text-indigo-700 shadow whitespace-nowrap">
+                            <span class="material-symbols-outlined text-[13px]">payments</span>
+                            HEMAT BUDGET
+                        </span>
+                    </div>
+
+                    <!-- Plan name -->
+                    <p class="text-2xl font-extrabold text-gray-900 mb-1 mt-2">Plus</p>
+
+                    <!-- Price -->
+                    <div class="flex items-baseline gap-2 mb-1">
+                        <span class="text-2xl font-bold text-gray-400 line-through decoration-red-400">Rp 349.000</span>
+                    </div>
+                    <div class="flex items-baseline gap-2 mb-1">
+                        <span class="text-base font-semibold text-gray-500">Rp</span>
+                        <span class="text-5xl font-extrabold text-gray-900 leading-none">10.000</span>
+                        <span class="text-sm text-gray-500 whitespace-nowrap">/ bulan</span>
+                    </div>
+                    <p class="text-xs text-indigo-600 font-semibold mb-6">Stok Masih Banyak · Tanpa syarat promo</p>
+
+                    <!-- Divider -->
+                    <div class="border-t border-indigo-200 mb-5"></div>
+
+                    <!-- Feature list -->
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Ringkasan Fitur:</p>
+                    <ul class="space-y-3 text-sm text-gray-700 flex-1">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">auto_awesome</span>
+                            <span>GPT-5 lebih banyak <strong>(Instant, Thinking)</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">chat</span>
+                            <span>Bahkan lebih banyak pesan dan unggahan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">image</span>
+                            <span>Pembuatan gambar lebih banyak dan cepat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">memory</span>
+                            <span>Memori yang diperluas di seluruh obrolan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">manage_search</span>
+                            <span>Riset mendalam yang diperluas</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">dashboard_customize</span>
+                            <span>Proyek dan GPT kustom</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-indigo-500 text-[18px] mt-0.5 shrink-0">support_agent</span>
+                            <span>Support via WhatsApp</span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA -->
+                    <a href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Plus%20yang%2010K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
+                        target="_blank" rel="noopener noreferrer"
+                        class="mt-8 block w-full text-center rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold py-3.5 transition-all shadow-sm shadow-indigo-400/40 hover:shadow-md hover:shadow-indigo-400/50 hover:-translate-y-0.5">
+                        Klaim Penawaran Murah
+                    </a>
+                </div>
+
+                <!-- Card Business (Our Product) -->
+                <div
+                    class="relative rounded-3xl border-2 border-primary bg-white p-8 flex flex-col shadow-lg shadow-primary/10">
+                    <!-- Badge -->
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                        <span
+                            class="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1 text-xs font-bold text-white shadow-lg shadow-primary/30 whitespace-nowrap">
+                            <span class="material-symbols-outlined text-[13px]">star</span>
+                            REKOMENDASI
+                        </span>
+                    </div>
+
+                    <!-- Plan name -->
+                    <p class="text-2xl font-extrabold text-gray-900 mb-1 mt-2">Business</p>
+
+                    <!-- Price -->
+                    <div class="flex items-baseline gap-2 mb-1">
+                        <span class="text-2xl font-bold text-gray-400 line-through decoration-red-400">Rp 469.000</span>
+                    </div>
+                    <div class="flex items-baseline gap-2 mb-1">
+                        <span class="text-base font-semibold text-gray-500">Rp</span>
+                        <span class="text-5xl font-extrabold text-gray-900 leading-none">15.000</span>
+                        <span class="text-sm text-gray-500 whitespace-nowrap">/ bulan</span>
+                    </div>
+                    <p class="text-xs text-primary font-semibold mb-6">Stok Terbatas · Tanpa syarat promo</p>
+
+                    <!-- Divider -->
+                    <div class="border-t border-gray-100 mb-5"></div>
+
+                    <!-- Feature list -->
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Semua yang ada di Plus,
+                        dengan tambahan:</p>
+                    <ul class="space-y-3 text-sm text-gray-700 flex-1">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">all_inclusive</span>
+                            <span>GPT-5 Unlimited <strong>(Instant, Thinking, Pro)</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">apps</span>
+                            <span>60+ integrasi aplikasi (Slack, Drive, GitHub, dll)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">encrypted</span>
+                            <span>Data privat jadi tidak dipakai training AI</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">smart_toy</span>
+                            <span>Codex Agent & Sora Video Full Access</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">business_center</span>
+                            <span>Fitur bisnis: canvas, analisis data, proyek</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">support_agent</span>
+                            <span>Support via WhatsApp </span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA -->
+                    <a href="https://wa.me/6281234228779?text=Halo%2C%20saya%20mau%20beli%20ChatGPT%20Business%20yang%2015K%2Fbulan.%20Bisa%20minta%20info%20cara%20pembayarannya%3F"
+                        target="_blank" rel="noopener noreferrer"
+                        class="md-ripple md-btn mt-8 block w-full text-center rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-semibold py-3.5 transition-all shadow-sm shadow-primary/20">
+                        Ambil Slot Business Sekarang
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom note -->
+            <p class="text-center text-xs text-gray-400 mt-8 md-reveal">
+                <span class="material-symbols-outlined text-[14px] align-middle mr-1">info</span>
+                Akun Plus menggunakan email dari kami, sedangkan Akun Business menggunakan email kamu sendiri.
+            </p>
+
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="py-20 bg-white" id="faq">
